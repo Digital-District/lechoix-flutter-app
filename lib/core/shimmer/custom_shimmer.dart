@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:lechoix/core/constant/dimenssions/screenutil.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:lechoix/core/constant/dimenssions/measures.dart';
-import 'package:lechoix/features/home/presentation/widget/home_card.dart';
 
 class CustomShimmer extends StatelessWidget {
   final Widget child;
@@ -38,22 +37,22 @@ class Shimmers extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           // final data = list[index];
-          return Row(
+          return const Row(
             children: [
-              HomeCard(
-                // tap: () {},
-                hasOption: false,
-                currency: "",
-                id: 0,
-                imgUrl: "}",
-                isFavorite: true,
-                priceAftersale: 0,
-                price: 0,
-                productName: "",
-              ),
-              const SizedBox(
-                width: 15,
-              )
+              // HomeCard(
+              //   // tap: () {},
+              //   hasOption: false,
+              //   currency: "",
+              //   id: 0,
+              //   imgUrl: "}",
+              //   isFavorite: true,
+              //   priceAftersale: 0,
+              //   price: 0,
+              //   productName: "",
+              // ),
+              // const SizedBox(
+              //   width: 15,
+              // )
             ],
           );
         },

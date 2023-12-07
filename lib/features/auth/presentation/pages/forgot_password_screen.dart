@@ -5,11 +5,11 @@ import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart
 import 'package:lechoix/features/auth/presentation/cubit/forget_password/forgot_password_bloc.dart';
 import 'package:lechoix/features/auth/presentation/pages/otp_verify_screen.dart';
 // import 'package:lechoix/ui/screens/auth/otpVerify/otp_verify_screen.dart';
-import 'package:lechoix/ui/widget/app_bar_widget.dart';
-import 'package:lechoix/ui/widget/button/elevated_button_widget.dart';
-import 'package:lechoix/ui/widget/space_widget.dart';
-import 'package:lechoix/ui/widget/textField/input_field_widget.dart';
-import 'package:lechoix/ui/widget/textField/phone_text_field_widget.dart';
+import 'package:lechoix/core/widgets/app_bar_widget.dart';
+import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
+import 'package:lechoix/core/widgets/space_widget.dart';
+import 'package:lechoix/core/widgets/textField/input_field_widget.dart';
+import 'package:lechoix/core/widgets/textField/phone_text_field_widget.dart';
 import '../../../../data/Enumeration.dart';
 // import 'forgot_password_bloc.dart';
 

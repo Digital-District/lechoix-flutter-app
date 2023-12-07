@@ -5,12 +5,12 @@ import 'package:lechoix/cache/user_cache.dart';
 import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
 import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 import 'package:lechoix/core/util/utils/notification_handler.dart';
-import 'package:lechoix/ui/screens/host/more/notification_bloc.dart';
-import 'package:lechoix/ui/widget/button/elevated_button_widget.dart';
-import 'package:lechoix/ui/widget/button/text_button_widget.dart';
-import 'package:lechoix/ui/widget/image/cached_image_widget.dart';
-import 'package:lechoix/ui/widget/onBoarding_widget.dart';
-import 'package:lechoix/ui/widget/space_widget.dart';
+import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
+import 'package:lechoix/core/widgets/button/text_button_widget.dart';
+import 'package:lechoix/core/widgets/image/cached_image_widget.dart';
+import 'package:lechoix/core/widgets/onBoarding_widget.dart';
+import 'package:lechoix/core/widgets/space_widget.dart';
+import 'package:lechoix/features/splash/presentation/cubit/notification_bloc.dart';
 
 import '../../../../data/response/OnBoardingResponse.dart';
 class OnBoardingNotificationsWidget extends StatefulWidget {
@@ -82,7 +82,7 @@ class _OnBoardingNotificationsWidgetState
 
   Future<void> requestNotificationPermission() async {
     await NotificationHandler.instance.init();
-    await bloc.updateNotificationToken();
+    // await bloc.updateNotificationToken();
 
     widget.callBack();
   }

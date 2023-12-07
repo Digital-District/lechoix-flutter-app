@@ -5,18 +5,17 @@ import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
 import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 import 'package:lechoix/core/util/utils/validation_util.dart';
 import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart';
+import 'package:lechoix/features/auth/presentation/cubit/register/register_bloc.dart';
 import 'package:lechoix/features/auth/presentation/pages/login_screen.dart';
 import 'package:lechoix/features/auth/presentation/pages/otp_verify_screen.dart';
-import 'package:lechoix/ui/screens/auth/register/register_bloc.dart';
-import 'package:lechoix/ui/screens/host/more/dynamic_HTML/dynamic_HTML_screen.dart';
-import 'package:lechoix/ui/widget/app_bar_widget.dart';
-import 'package:lechoix/ui/widget/button/elevated_button_widget.dart';
-import 'package:lechoix/ui/widget/button/outlined_button_widget.dart';
-import 'package:lechoix/ui/widget/button/text_button_widget.dart';
-import 'package:lechoix/ui/widget/space_widget.dart';
-import 'package:lechoix/ui/widget/textField/input_field_widget.dart';
-import 'package:lechoix/ui/widget/textField/phone_text_field_widget.dart';
-import 'package:lechoix/ui/widget/textField/text_field_widget.dart';
+import 'package:lechoix/core/widgets/app_bar_widget.dart';
+import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
+import 'package:lechoix/core/widgets/button/outlined_button_widget.dart';
+import 'package:lechoix/core/widgets/button/text_button_widget.dart';
+import 'package:lechoix/core/widgets/space_widget.dart';
+import 'package:lechoix/core/widgets/textField/input_field_widget.dart';
+import 'package:lechoix/core/widgets/textField/phone_text_field_widget.dart';
+import 'package:lechoix/core/widgets/textField/text_field_widget.dart';
 
 class RegisterScreen extends StatefulWidget {
   final bool allowedToPush;
@@ -169,12 +168,12 @@ class _RegisterScreenState extends BaseState<RegisterScreen, RegisterBloc> {
                       style: const TextStyle(decoration: TextDecoration.underline),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          navigateTo(
-                              const DynamicHTMLScreen(
-                                "Terms & Conditions",
-                                "terms-and-conditions",
-                              ),
-                              fullscreenDialog: true);
+                          // navigateTo(
+                          //     const DynamicHTMLScreen(
+                          //       "Terms & Conditions",
+                          //       "terms-and-conditions",
+                          //     ),
+                          //     fullscreenDialog: true);
                         },
                     ),
                     TextSpan(text: " ${localize("and")} "),
@@ -183,10 +182,10 @@ class _RegisterScreenState extends BaseState<RegisterScreen, RegisterBloc> {
                       style: const TextStyle(decoration: TextDecoration.underline),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
-                          navigateTo(
-                              const DynamicHTMLScreen(
-                                  "Privacy Policy", "privacy-policy"),
-                              fullscreenDialog: true);
+                          // navigateTo(
+                          //     const DynamicHTMLScreen(
+                          //         "Privacy Policy", "privacy-policy"),
+                          //     fullscreenDialog: true);
                         },
                     ),
                   ],

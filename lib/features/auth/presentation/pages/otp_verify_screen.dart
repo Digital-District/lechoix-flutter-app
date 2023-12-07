@@ -3,12 +3,12 @@ import 'package:lechoix/base/base_state.dart';
 import 'package:lechoix/core/util/utils/navigation_util.dart';
 import 'package:lechoix/core/util/utils/route_util.dart';
 import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart';
+import 'package:lechoix/features/auth/presentation/cubit/check_otp/otp_verify_bloc.dart';
 import 'package:lechoix/features/auth/presentation/pages/reset_password_screen.dart';
-import 'package:lechoix/ui/screens/auth/otpVerify/otp_verify_bloc.dart';
-import 'package:lechoix/ui/widget/app_bar_widget.dart';
-import 'package:lechoix/ui/widget/button/elevated_button_widget.dart';
-import 'package:lechoix/ui/widget/space_widget.dart';
-import 'package:lechoix/ui/widget/stream/stream_widget.dart';
+import 'package:lechoix/core/widgets/app_bar_widget.dart';
+import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
+import 'package:lechoix/core/widgets/space_widget.dart';
+import 'package:lechoix/core/widgets/stream/stream_widget.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
 import '../../../../data/Enumeration.dart';

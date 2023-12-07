@@ -4,13 +4,13 @@ import 'package:lechoix/core/util/utils/navigation_util.dart';
 import 'package:lechoix/core/util/utils/route_util.dart';
 import 'package:lechoix/core/util/utils/validation_util.dart';
 import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart';
-import 'package:lechoix/ui/screens/auth/resetPassword/reset_password_bloc.dart';
-import 'package:lechoix/ui/widget/app_bar_widget.dart';
-import 'package:lechoix/ui/widget/button/elevated_button_widget.dart';
-import 'package:lechoix/ui/widget/button/text_button_widget.dart';
-import 'package:lechoix/ui/widget/space_widget.dart';
-import 'package:lechoix/ui/widget/textField/input_field_widget.dart';
-import 'package:lechoix/ui/widget/textField/text_field_widget.dart';
+import 'package:lechoix/core/widgets/app_bar_widget.dart';
+import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
+import 'package:lechoix/core/widgets/button/text_button_widget.dart';
+import 'package:lechoix/core/widgets/space_widget.dart';
+import 'package:lechoix/core/widgets/textField/input_field_widget.dart';
+import 'package:lechoix/core/widgets/textField/text_field_widget.dart';
+import 'package:lechoix/features/auth/presentation/cubit/update_password/reset_password_bloc.dart';
 
 class ResetPasswordScreen extends StatefulWidget {
   final bool allowedToPush;

@@ -3,12 +3,12 @@ import 'package:lechoix/base/base_view.dart';
 import 'package:lechoix/cache/configuration_cache.dart';
 import 'package:lechoix/cache/country_codes_cache.dart';
 import 'package:lechoix/data/response/OnBoardingResponse.dart';
-import 'package:lechoix/repo/ConfigRepo.dart';
+import 'package:lechoix/features/splash/presentation/cubit/ConfigRepo.dart';
 
 class SplashBloc extends BaseBloc {
-  ConfigRepo _repo = ConfigRepo();
+  final ConfigRepo _repo = ConfigRepo();
 
-  SplashBloc(BaseView view) : super(view);
+  SplashBloc(super.view);
 
   Future<void> getCountryCodes() async {
     try {

@@ -1,24 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
-import 'package:lechoix/features/account/data/datasources/account_datasource.dart';
-import 'package:lechoix/features/account/domain/repositories/account_repository.dart';
-import 'package:lechoix/features/account/domain/usecases/contact_us.dart';
-import 'package:lechoix/features/account/domain/usecases/edit_profile.dart';
-import 'package:lechoix/features/account/domain/usecases/get_notifications.dart';
-import 'package:lechoix/features/account/domain/usecases/get_static_pages.dart';
-import 'package:lechoix/features/account/presentation/cubit/account_cubit.dart';
 import 'package:lechoix/features/auth/domain/usecase/delete_account.dart';
 import 'package:lechoix/features/auth/domain/usecase/log_out.dart';
 import 'package:lechoix/features/auth/presentation/cubit/auto_login/auto_login_cubit.dart';
 import 'package:lechoix/features/auth/presentation/cubit/log_out/auth_cubit.dart';
 import 'package:lechoix/features/auth/presentation/cubit/login/login_cubit.dart';
 import 'package:lechoix/features/auth/presentation/cubit/register/register_cubit.dart';
-import 'package:lechoix/features/notifications/presentation/cubit/notifications_cubit.dart';
-
 import '../../core/local/auth_local_datasource.dart';
 import '../../injection_container/injection_container.dart';
-import '../account/data/repositories/account_repository_impl.dart';
 import 'data/datasources/auth_remote_data_source.dart';
 import 'data/repositories/auth_repository_impl.dart';
 import 'domain/repositories/auth_repositoriy.dart';
@@ -34,8 +24,8 @@ Future<void> initAuthInjection(GetIt sl) async {
       ));
   sl.registerFactory(() => AutoLoginCubit(autoLogin: sl()));
   sl.registerFactory(() => LoginCubit(sl()));
-  sl.registerFactory(() => AccountCubit(sl(), sl(), sl()));
-  sl.registerFactory(() => NotificationsCubit(getNotifications: sl() ));
+  // sl.registerFactory(() => AccountCubit(sl(), sl(), sl()));
+  // sl.registerFactory(() => NotificationsCubit(getNotifications: sl() ));
   sl.registerFactory(() => LogOutCubit(logout: sl()));
   sl.registerFactory(() => DeleteAccountCubit(logout: sl()));
   // sl.registerFactory(() => CheckOtpCubit(checkOtp: sl()));
@@ -47,10 +37,10 @@ Future<void> initAuthInjection(GetIt sl) async {
   sl.registerLazySingleton(() => LoginUseCase(repository: sl()));
   sl.registerLazySingleton(() => AutoLogin(repository: sl()));
   sl.registerLazySingleton(() => RegisterUseCase(repository: sl()));
-  sl.registerLazySingleton(() => EditProfile(repository: sl()));
-  sl.registerLazySingleton(() => GetNotifications(repository: sl()));
-  sl.registerLazySingleton(() => GetStaticPage(repository: sl()));
-  sl.registerLazySingleton(() => ContactUs(repository: sl()));
+  // sl.registerLazySingleton(() => EditProfile(repository: sl()));
+  // sl.registerLazySingleton(() => GetNotifications(repository: sl()));
+  // sl.registerLazySingleton(() => GetStaticPage(repository: sl()));
+  // sl.registerLazySingleton(() => ContactUs(repository: sl()));
   sl.registerLazySingleton(() => LogoutUseCase(repository: sl()));
   sl.registerLazySingleton(() => DeleteAccountUseCase(repository: sl()));
   // sl.registerLazySingleton(() => CheckOtpUseCase(repository: sl()));
@@ -65,12 +55,12 @@ Future<void> initAuthInjection(GetIt sl) async {
       local: sl(),
     ),
   );
-  sl.registerLazySingleton<AccountRepository>(
-    () => AccountRepositoryImpl(
-      remote: sl(),
-      local: sl(),
-    ),
-  );
+  // sl.registerLazySingleton<AccountRepository>(
+  //   () => AccountRepositoryImpl(
+  //     remote: sl(),
+  //     local: sl(),
+  //   ),
+  // );
 
   //* Data sources
   sl.registerLazySingleton<AuthRemoteDataSource>(
@@ -83,11 +73,11 @@ Future<void> initAuthInjection(GetIt sl) async {
       sharedPreference: sl(),
     ),
   );
-  sl.registerLazySingleton<AccountRemoteDataSource>(
-    () => AccountRemoteDataSourceImpl(
-      helper: sl(),
-    ),
-  );
+  // sl.registerLazySingleton<AccountRemoteDataSource>(
+  //   () => AccountRemoteDataSourceImpl(
+  //     helper: sl(),
+  //   ),
+  // );
 }
 
 List<BlocProvider> authBlocs(BuildContext context) => [
@@ -98,11 +88,11 @@ List<BlocProvider> authBlocs(BuildContext context) => [
       BlocProvider<AutoLoginCubit>(
         create: (BuildContext context) => sl<AutoLoginCubit>()..fAutoLogin(),
       ),
-      BlocProvider<AccountCubit>(
-          // create: (BuildContext context) => sl<AccountCubit>()..getUserData()),
-          create: (BuildContext context) => sl<AccountCubit>()),
-  BlocProvider<NotificationsCubit>(
-        create: (BuildContext context) => sl<NotificationsCubit>()..fGetNotifications(),),
+  //     BlocProvider<AccountCubit>(
+  //         // create: (BuildContext context) => sl<AccountCubit>()..getUserData()),
+  //         create: (BuildContext context) => sl<AccountCubit>()),
+  // BlocProvider<NotificationsCubit>(
+  //       create: (BuildContext context) => sl<NotificationsCubit>()..fGetNotifications(),),
       BlocProvider<LogOutCubit>(
           create: (BuildContext context) => sl<LogOutCubit>()),
       BlocProvider<DeleteAccountCubit>(

@@ -11,14 +11,14 @@ import 'package:lechoix/features/auth/presentation/cubit/login/login_bloc.dart';
 import 'package:lechoix/features/auth/presentation/pages/forgot_password_screen.dart';
 import 'package:lechoix/features/auth/presentation/pages/otp_verify_screen.dart';
 import 'package:lechoix/features/auth/presentation/pages/register_screen.dart';
-import 'package:lechoix/ui/widget/app_bar_widget.dart';
-import 'package:lechoix/ui/widget/button/elevated_button_widget.dart';
-import 'package:lechoix/ui/widget/button/outlined_button_widget.dart';
-import 'package:lechoix/ui/widget/button/text_button_widget.dart';
-import 'package:lechoix/ui/widget/space_widget.dart';
-import 'package:lechoix/ui/widget/textField/input_field_widget.dart';
-import 'package:lechoix/ui/widget/textField/phone_text_field_widget.dart';
-import 'package:lechoix/ui/widget/textField/text_field_widget.dart';
+import 'package:lechoix/core/widgets/app_bar_widget.dart';
+import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
+import 'package:lechoix/core/widgets/button/outlined_button_widget.dart';
+import 'package:lechoix/core/widgets/button/text_button_widget.dart';
+import 'package:lechoix/core/widgets/space_widget.dart';
+import 'package:lechoix/core/widgets/textField/input_field_widget.dart';
+import 'package:lechoix/core/widgets/textField/phone_text_field_widget.dart';
+import 'package:lechoix/core/widgets/textField/text_field_widget.dart';
 
 
 class LoginScreen extends StatefulWidget {

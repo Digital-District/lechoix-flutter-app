@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
 import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/ui/widget/button/elevated_button_widget.dart';
-import 'package:lechoix/ui/widget/image/cached_image_widget.dart';
-import 'package:lechoix/ui/widget/onBoarding_widget.dart';
-import 'package:lechoix/ui/widget/space_widget.dart';
+import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
+import 'package:lechoix/core/widgets/image/cached_image_widget.dart';
+import 'package:lechoix/core/widgets/onBoarding_widget.dart';
+import 'package:lechoix/core/widgets/space_widget.dart';
 import '../../../../cache/user_cache.dart';
 import '../../../../data/response/OnBoardingResponse.dart';
 
@@ -24,22 +24,20 @@ class _OnBoardingContentWidgetState extends State<OnBoardingContentWidget> {
   @override
   Widget build(BuildContext context) {
     return OnBoardingWidget(
-        topWidget: Container(
-          child: Stack(children: [
-            CachedImageWidget(
-              imageUrl: screenContent.image ?? "",
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: double.infinity,
+        topWidget: Stack(children: [
+          CachedImageWidget(
+            imageUrl: screenContent.image ?? "",
+            fit: BoxFit.cover,
+            width: double.infinity,
+            height: double.infinity,
+          ),
+          Center(
+            child: Image.asset(
+              "assets/images/logo_white_icon.png",
+              width: MediaQuery.of(context).size.width / 1.5,
             ),
-            Center(
-              child: Image.asset(
-                "assets/images/logo_white_icon.png",
-                width: MediaQuery.of(context).size.width / 1.5,
-              ),
-            )
-          ]),
-        ),
+          )
+        ]),
         bottomWidget: Padding(
           padding: const EdgeInsets.symmetric(vertical: 30, horizontal: 40),
           child: SingleChildScrollView(

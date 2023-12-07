@@ -9,7 +9,6 @@ import 'package:lechoix/core/util/utils/route_util.dart';
 import 'package:lechoix/features/auth/presentation/pages/login_screen.dart';
 import 'package:lechoix/features/splash/presentation/pages/onboarding_screen.dart';
 import 'package:lechoix/features/splash/presentation/pages/splash_screen.dart';
-import 'package:lechoix/ui/screens/host/host_screen.dart';
 
 import 'cache/user_cache.dart';
 
@@ -185,9 +184,9 @@ class MyApp extends StatelessWidget {
         RouteUtil.splashRoute: (context) => SplashScreen(),
         RouteUtil.onboardingRoute: (context) => OnboardingScreen(),
         RouteUtil.login: (context) => const LoginScreen(),
-        RouteUtil.hostRoute: (context) => HostScreen(
-              key: HostScreen.hostPageKey,
-            ),
+        // RouteUtil.hostRoute: (context) => HostScreen(
+        //       key: HostScreen.hostPageKey,
+        //     ),
       },
     );
   }
