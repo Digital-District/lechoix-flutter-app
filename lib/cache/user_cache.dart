@@ -4,7 +4,7 @@ import 'package:lechoix/features/auth/domain/entities/auth/AuthResponseModel.dar
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../data/response/OnBoardingResponse.dart';
-import '../ui/screens/host/host_bloc.dart';
+// import '../ui/screens/host/host_bloc.dart';
 
 class UserCache {
   static final UserCache _instance = UserCache._private();
@@ -125,7 +125,7 @@ class UserCache {
       newCount = count;
     }
     _prefs.setInt(UserCacheKeys.cartCount, newCount);
-    HostBloc.updateCartCount();
+    // HostBloc.updateCartCount();
   }
 
   int getCartCount() {
