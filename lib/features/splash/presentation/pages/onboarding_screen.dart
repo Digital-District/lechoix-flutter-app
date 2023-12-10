@@ -50,7 +50,7 @@ class _OnboardingScreenState extends BaseState<OnboardingScreen, DummyBloc> {
   void navigateToTheNext() {
     print(controller.page);
     if (controller.page == 2) {
-      pushReplacementNamed(RouteUtil.hostRoute);
+      pushReplacementNamed(RouteUtil.login);
       UserCache.instance.setOnboardingStatus(true);
     } else {
       controller.nextPage(

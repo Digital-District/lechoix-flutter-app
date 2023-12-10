@@ -82,6 +82,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.1
+  injectable_generator: any
+  build_runner: any
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -100,19 +102,20 @@ flutter:
     - assets/translations/
   
   fonts:
-    - family: avenir
+    - family: Almarai
       fonts:
-        - asset: assets/fonts/AvenirLTStd-Black.otf
-        - asset: assets/fonts/AvenirLTStd-Book.otf
-        - asset: assets/fonts/AvenirLTStd-Roman.otf
-    - family: Playfair
-      fonts:
-        - asset: assets/fonts/playfair_display/PlayfairDisplay-Regular.ttf
-          weight: 400
-        - asset: assets/fonts/playfair_display/PlayfairDisplay-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/playfair_display/PlayfairDisplay-ExtraBold.ttf
-          weight: 800
-    - family: GE_SS_Two_Light
-      fonts:
-        - asset: assets/fonts/ge_ss_two_light/ArbFONTS-59GE-SS-Two.otf
+        - asset: assets/fonts/Almarai-Light.ttf
+        - asset: assets/fonts/Almarai-Regular.ttf
+        - asset: assets/fonts/Almarai-Bold.ttf
+        - asset: assets/fonts/Almarai-ExtraBold.ttf
+    # - family: Playfair
+    #   fonts:
+    #     - asset: assets/fonts/playfair_display/PlayfairDisplay-Regular.ttf
+    #       weight: 400
+    #     - asset: assets/fonts/playfair_display/PlayfairDisplay-Medium.ttf
+    #       weight: 500
+    #     - asset: assets/fonts/playfair_display/PlayfairDisplay-ExtraBold.ttf
+    #       weight: 800
+    # - family: GE_SS_Two_Light
+    #   fonts:
+    #     - asset: assets/fonts/ge_ss_two_light/ArbFONTS-59GE-SS-Two.otf

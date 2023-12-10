@@ -2,16 +2,19 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:lechoix/cache/user_cache.dart';
+import 'package:lechoix/core/util/network/graphql_service.dart';
 import 'package:lechoix/core/util/network/network_manager.dart';
 
 abstract class BaseRepo {
   late CancelToken cancelToken;
   late NetworkManager networkManager;
+  late GraphQLService graphQLService;
   UserCache userCache = UserCache.instance;
 
   BaseRepo() {
     cancelToken = CancelToken();
     networkManager = NetworkManager(cancelToken: cancelToken);
+    graphQLService =GraphQLService();
         final httpLink = HttpLink("https://test.lechoix.com/graphql");
      _client = GraphQLClient(
       link: httpLink,

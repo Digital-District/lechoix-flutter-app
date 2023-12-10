@@ -61,7 +61,8 @@ class _SplashScreenState extends BaseState<SplashScreen, SplashBloc> {
       const Duration(milliseconds: 1000),
       () {
         if (UserCache.instance.takeOnboardingStatus()) {
-          pushReplacementNamed(RouteUtil.hostRoute);
+          /// TODO:hst route
+          pushReplacementNamed(RouteUtil.login);
         } else {
           bloc.getOnBoardingScreens().then((response) {
             if (response != null && response.onBoarding != null) {
@@ -69,7 +70,8 @@ class _SplashScreenState extends BaseState<SplashScreen, SplashBloc> {
               UserCache.instance.onBoardingScreens.addAll(response.onBoarding ?? []);
               pushReplacementNamed(RouteUtil.onboardingRoute);
             }else {
-              pushReplacementNamed(RouteUtil.hostRoute);
+                        /// TODO:hst route
+              pushReplacementNamed(RouteUtil.login);
             }
 
           });

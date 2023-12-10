@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 abstract class TextStyleConstants {
   static const TextStyle headline4 = TextStyle(
-    fontFamily: "Playfair",
+    // fontFamily: "Playfair",
     fontSize: 30,
     fontWeight: FontWeight.w400,
   );
@@ -13,7 +13,7 @@ abstract class TextStyleConstants {
   );
 
   static const TextStyle headline6 = TextStyle(
-    fontFamily: "Playfair",
+    // fontFamily: "Playfair",
     fontSize: 20,
     fontWeight: FontWeight.w400,
   );
@@ -74,7 +74,7 @@ abstract class TextStyleConstants {
   );
 
   static const TextStyle price = TextStyle(
-    fontFamily: "Avenir",
+    // fontFamily: "Avenir",
     fontSize: 14,
     fontWeight: FontWeight.w500,
   );

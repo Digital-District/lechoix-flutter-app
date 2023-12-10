@@ -1,8 +1,8 @@
 class Endpoints {
   static const baseUrl =
-      "https://thelechoix.com/api/v1/";
+      "https://lechoix.com/api/v1/";
   static const stagingBaseUrl =
-      "https://staging.thelechoix.com/api/v1/";
+      "https://staging.theoniriq.com/api/v1/";
 
   // CONFIG
   static const getCountryCodes =  "country-codes";

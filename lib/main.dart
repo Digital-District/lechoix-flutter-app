@@ -9,21 +9,18 @@ import 'package:lechoix/core/util/utils/route_util.dart';
 import 'package:lechoix/features/auth/presentation/pages/login_screen.dart';
 import 'package:lechoix/features/splash/presentation/pages/onboarding_screen.dart';
 import 'package:lechoix/features/splash/presentation/pages/splash_screen.dart';
-
 import 'cache/user_cache.dart';
 
 const isProductionMood = false;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final HttpLink httpLink = HttpLink("https://test.lechoix.com/graphql");
-
   ValueNotifier<GraphQLClient> client = ValueNotifier(
     GraphQLClient(
       link: httpLink,
       cache: GraphQLCache(store: InMemoryStore()),
     ),
   );
-
   // await Firebase.initializeApp();
   await EasyLocalization.ensureInitialized();
   await UserCache.instance.init();
@@ -34,8 +31,7 @@ void main() async {
           supportedLocales: const [Locale('ar', 'EG'), Locale('en', 'US')],
           path: 'assets/translations',
           fallbackLocale: const Locale('en', 'US'),
-          child: const MyApp()));
-
+          child: const MyApp()))
   runApp(app);
   // runApp(
   //   EasyLocalization(
@@ -68,8 +64,7 @@ class MyApp extends StatelessWidget {
             TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
           },
         ),
-        fontFamily:
-            UserCache.instance.isArabic() ? "GE_SS_Two_Light" : "Avenir",
+        fontFamily:"Almarai",
         primarySwatch: UIConstants.primaryMaterialColor,
         scaffoldBackgroundColor: UIConstants.backgroundColor,
         colorScheme: const ColorScheme.light(
@@ -119,6 +114,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.compact,
       ),
       darkTheme: ThemeData(
+        fontFamily:"Almarai",
         brightness: Brightness.dark,
         primarySwatch: UIConstants.primaryMaterialColor,
         primaryColor: UIConstants.primaryMaterialColor,
@@ -181,8 +177,8 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: RouteUtil.splashRoute,
       routes: {
-        RouteUtil.splashRoute: (context) => SplashScreen(),
-        RouteUtil.onboardingRoute: (context) => OnboardingScreen(),
+        RouteUtil.splashRoute: (context) => const SplashScreen(),
+        RouteUtil.onboardingRoute: (context) => const OnboardingScreen(),
         RouteUtil.login: (context) => const LoginScreen(),
         // RouteUtil.hostRoute: (context) => HostScreen(
         //       key: HostScreen.hostPageKey,

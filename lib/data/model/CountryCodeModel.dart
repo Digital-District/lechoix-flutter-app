@@ -7,7 +7,7 @@ class CountryCodeModel {
   String? regex;
   String? code;
   String? flag;
-
+  
   String get codeWithName {
     String? name = UserCache.instance.isArabic() ? nameAr : nameEn;
     return "${code ?? ""} ${name ?? ""}".trim();
