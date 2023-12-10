@@ -11,6 +11,8 @@ import 'package:lechoix/features/splash/presentation/pages/onboarding_screen.dar
 import 'package:lechoix/features/splash/presentation/pages/splash_screen.dart';
 import 'cache/user_cache.dart';
 
+
+
 const isProductionMood = false;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
