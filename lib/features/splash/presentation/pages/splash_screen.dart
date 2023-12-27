@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/base/base_state.dart';
-import 'package:lechoix/cache/user_cache.dart';
-import 'package:lechoix/core/util/utils/navigation_util.dart';
-import 'package:lechoix/core/util/utils/route_util.dart';
-import 'package:lechoix/features/splash/presentation/cubit/splash_bloc.dart';
+
+import '../../../../core/base/base_state.dart';
+import '../../../../core/cache/user_cache.dart';
+import '../../../../core/util/utils/navigation_util.dart';
+import '../../../../core/util/utils/route_util.dart';
+import '../cubit/splash_bloc.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -62,18 +63,18 @@ class _SplashScreenState extends BaseState<SplashScreen, SplashBloc> {
       () {
         if (UserCache.instance.takeOnboardingStatus()) {
           /// TODO:hst route
-          pushReplacementNamed(RouteUtil.login);
+          pushReplacementNamed(RouteUtil.hostRoute);
         } else {
           bloc.getOnBoardingScreens().then((response) {
             if (response != null && response.onBoarding != null) {
               UserCache.instance.onBoardingScreens.clear();
-              UserCache.instance.onBoardingScreens.addAll(response.onBoarding ?? []);
+              UserCache.instance.onBoardingScreens
+                  .addAll(response.onBoarding ?? []);
               pushReplacementNamed(RouteUtil.onboardingRoute);
-            }else {
-                        /// TODO:hst route
-              pushReplacementNamed(RouteUtil.login);
+            } else {
+              /// TODO:hst route
+              pushReplacementNamed(RouteUtil.hostRoute);
             }
-
           });
         }
       },

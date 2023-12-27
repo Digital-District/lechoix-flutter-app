@@ -1,5 +1,4 @@
-import 'package:lechoix/cache/user_cache.dart';
-import '../../../../base/base_bloc.dart';
+import '../../../../core/base/base_bloc.dart';
 
 class NotificationBloc extends BaseBloc {
   // final NotificationRepo _repo = NotificationRepo();
@@ -30,9 +29,6 @@ class NotificationBloc extends BaseBloc {
   //   }
   //   return false;
   // }
-
-
-
 
   @override
   void onDispose() {

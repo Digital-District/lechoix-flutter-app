@@ -1,4 +1,4 @@
-import 'package:lechoix/data/model/CountryCodeModel.dart';
+import '../model/CountryCodeModel.dart';
 
 class CountryCodeResponse {
   List<CountryCodeModel>? countryCodes;

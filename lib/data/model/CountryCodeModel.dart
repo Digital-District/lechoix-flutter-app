@@ -1,4 +1,4 @@
-import 'package:lechoix/cache/user_cache.dart';
+import '../../core/cache/user_cache.dart';
 
 class CountryCodeModel {
   int? id;
@@ -7,7 +7,7 @@ class CountryCodeModel {
   String? regex;
   String? code;
   String? flag;
-  
+
   String get codeWithName {
     String? name = UserCache.instance.isArabic() ? nameAr : nameEn;
     return "${code ?? ""} ${name ?? ""}".trim();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/textField/text_field_widget.dart';
+import '../util/utils/consts/ui_constants.dart';
+import 'textField/text_field_widget.dart';
 
 class AppBarWidget extends AppBar {
   final Widget centerWidget;
@@ -41,7 +41,8 @@ class AppBarWidget extends AppBar {
                       const SizedBox(height: 2),
                       Text(
                         subText,
-                        style: const TextStyle(fontSize: 12, color: Colors.grey),
+                        style:
+                            const TextStyle(fontSize: 12, color: Colors.grey),
                       ),
                       const SizedBox(height: 16),
                     ],
@@ -56,7 +57,6 @@ class AppBarWidget extends AppBar {
         );
 
   AppBarWidget.logo({
-    Key? key,
     String logo = "assets/images/logo_black_icon.png",
     String? subText,
     Widget? leadingIcon,
@@ -93,7 +93,7 @@ class AppBarWidget extends AppBar {
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(40),
             child: Padding(
-              padding:  const EdgeInsets.symmetric(horizontal: 14),
+              padding: const EdgeInsets.symmetric(horizontal: 14),
               child: Column(
                 children: [
                   TextFieldWidget(
@@ -104,7 +104,10 @@ class AppBarWidget extends AppBar {
                     fillColor: UIConstants.gray6Color,
                     prefixIcon: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                      child: Image.asset("assets/images/ic_search.png"),
+                      child: Image.asset(
+                        "assets/images/ic_search.png",
+                        height: 25,
+                      ),
                     ),
                   ),
                   Visibility(

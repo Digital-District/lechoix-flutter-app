@@ -1,5 +1,5 @@
-import 'package:lechoix/data/model/PaginationModel.dart';
-import 'package:lechoix/data/model/ProductModel.dart';
+import '../model/PaginationModel.dart';
+import '../model/ProductModel.dart';
 
 class ProductsResponse {
   List<ProductModel>? products;

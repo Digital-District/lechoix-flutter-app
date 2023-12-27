@@ -1,13 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:lechoix/cache/configuration_cache.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../cache/configuration_cache.dart';
+import '../util/utils/consts/text_style_constants.dart';
+import '../util/utils/consts/ui_constants.dart';
 import 'button/extended_label_with_icon_widget.dart';
 import 'button/outlined_button_widget.dart';
+import 'space_widget.dart';
 
 class NeedHelpWidget extends StatelessWidget {
   const NeedHelpWidget({super.key});
@@ -39,7 +39,8 @@ class NeedHelpWidget extends StatelessWidget {
             children: [
               Expanded(
                 child: OutlinedButtonWidget(
-                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
                   fontSize: 12,
                   backgroundColor: Theme.of(context).colorScheme.primary,
                   child: ExtendedLabelWithIconWidget(

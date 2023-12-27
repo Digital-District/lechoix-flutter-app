@@ -25,9 +25,12 @@ class UIConstants {
     },
   );
 
-  static const Color secondaryColor = Color(0xFF000000);
-  static const Color gray1Color = Color(0xFF333333);
-  static const Color gray2Color = Color(0xFF4F4F4F);
+  // static const Color secondaryColor = Color(0xFF000000);
+  static const Color secondaryColor = Color(0xFFd19287);
+  // static const Color gray1Color = Color(0xFF333333);
+  static const Color gray1Color = Color(0xFF5b708e);
+  // static const Color gray2Color = Color(0xFF4F4F4F);
+  static const Color gray2Color = Color(0xFFb0c0d9);
   static const Color gray3Color = Color(0xFF828282);
   static const Color gray4Color = Color(0xFFBDBDBD);
   static const Color gray5Color = Color(0xFFE0E0E0);
@@ -35,8 +38,11 @@ class UIConstants {
   static const Color gray7Color = Color(0xFFFAFAFA);
 
   static const Color redColor = Color(0xFFEB5757);
-  static const Color green2Color = Color(0xFF27AE60);
+  static const Color blackColor = Color(0xFF0f1439);
+  // static const Color green2Color = Color(0xFF27AE60);
+  static const Color green2Color = Color(0xFF7bc6b1);
   static const Color shimmer = Color(0xFFD8DADC);
   static const Color backgroundColor = Colors.white;
-  static const Color goldColor = Color(0xFF84754E);
+  static const Color goldColor = Color(0xFFd5bd91);
+  // static const Color goldColor = Color(0xFF84754E);
 }

@@ -19,7 +19,7 @@ class StreamListWidget<T> extends StatelessWidget {
   final Axis scrollDirection;
 
   const StreamListWidget({
-    Key? key,
+    super.key,
     required this.stream,
     required this.onRetry,
     this.loadingWidget = const LoadingWidget(),
@@ -31,7 +31,7 @@ class StreamListWidget<T> extends StatelessWidget {
     this.scrollController,
     this.physics,
     this.scrollDirection = Axis.vertical,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
+
+import '../util/utils/consts/ui_constants.dart';
 
 class CardWidget extends StatelessWidget {
   final Widget child;
@@ -12,7 +13,7 @@ class CardWidget extends StatelessWidget {
   final Color? shadowColor;
 
   const CardWidget({
-    Key? key,
+    super.key,
     required this.child,
     this.elevation = UIConstants.elevation,
     this.radius = UIConstants.radius,

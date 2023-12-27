@@ -1,14 +1,14 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/stream/stream_widget.dart';
-import 'package:lechoix/data/model/PaginationModel.dart';
-import 'package:lechoix/data/pair.dart';
 
+import '../../../data/model/PaginationModel.dart';
+import '../../../data/pair.dart';
+import '../../util/utils/consts/ui_constants.dart';
 import '../loading_widget.dart';
 import '../no_result_widget.dart';
 import '../retry_widget.dart';
+import 'stream_widget.dart';
 
 class PaginatedGridWidget<T> extends StatefulWidget {
   final Stream<Pair<List<T>, PaginationModel>?> stream;

@@ -1,6 +1,5 @@
-import 'package:lechoix/data/home/ActionModel.dart';
-
 import '../model/ProductModel.dart';
+import 'ActionModel.dart';
 
 class HomeItemModel {
   String? image;

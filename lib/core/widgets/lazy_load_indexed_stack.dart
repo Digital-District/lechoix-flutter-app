@@ -27,15 +27,15 @@ class LazyLoadIndexedStack extends StatefulWidget {
 
   /// Creates LazyLoadIndexedStack that wraps IndexedStack.
   LazyLoadIndexedStack({
-    Key? key,
+    super.key,
     Widget? unloadWidget,
     this.alignment = AlignmentDirectional.topStart,
     this.sizing = StackFit.loose,
     this.textDirection,
     required this.index,
     required this.children,
-  }) : super(key: key) {
-    this.unloadWidget = unloadWidget == null ? Container() : unloadWidget;
+  }) {
+    this.unloadWidget = unloadWidget ?? Container();
   }
 
   @override
@@ -64,10 +64,10 @@ class _LazyLoadIndexedStackState extends State<LazyLoadIndexedStack> {
   Widget build(final BuildContext context) {
     return IndexedStack(
       index: widget.index,
-      children: _loadedChildren(),
       alignment: widget.alignment,
       textDirection: widget.textDirection,
       sizing: widget.sizing,
+      children: _loadedChildren(),
     );
   }
 

@@ -1,18 +1,18 @@
-import 'package:lechoix/data/CategoryModel.dart';
-import 'package:lechoix/data/ConfigurationModel.dart';
-import 'package:lechoix/data/address/AddressResponse.dart';
-import 'package:lechoix/data/address/locations/LocationsResponse.dart';
-import 'package:lechoix/data/cart/CartResponse.dart';
-import 'package:lechoix/data/filtration/Response/FiltrationDataList.dart';
-import 'package:lechoix/data/home/HomeResponse.dart';
-import 'package:lechoix/data/model/HTMLModel.dart';
-import 'package:lechoix/data/model/ProductModel.dart';
-import 'package:lechoix/data/orders/MyOrdersResponse.dart';
-import 'package:lechoix/data/orders/OrderModel.dart';
-import 'package:lechoix/data/response/CountryCodeResponse.dart';
-import 'package:lechoix/data/response/OnBoardingResponse.dart';
-import 'package:lechoix/data/response/ProductsResponse.dart';
-import 'package:lechoix/features/auth/domain/entities/auth/AuthResponseModel.dart';
+import '../../../data/CategoryModel.dart';
+import '../../../data/ConfigurationModel.dart';
+import '../../../data/address/AddressResponse.dart';
+import '../../../data/address/locations/LocationsResponse.dart';
+import '../../../data/cart/CartResponse.dart';
+import '../../../data/filtration/Response/FiltrationDataList.dart';
+import '../../../data/home/HomeResponse.dart';
+import '../../../data/model/HTMLModel.dart';
+import '../../../data/model/ProductModel.dart';
+import '../../../data/orders/MyOrdersResponse.dart';
+import '../../../data/orders/OrderModel.dart';
+import '../../../data/response/CountryCodeResponse.dart';
+import '../../../data/response/OnBoardingResponse.dart';
+import '../../../data/response/ProductsResponse.dart';
+import '../../../features/auth/domain/entities/auth/AuthResponseModel.dart';
 
 
 

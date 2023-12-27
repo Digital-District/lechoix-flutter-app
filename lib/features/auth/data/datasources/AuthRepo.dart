@@ -1,10 +1,10 @@
-import 'package:lechoix/base/base_repo.dart';
-import 'package:lechoix/core/util/network/endpoints.dart';
-import 'package:lechoix/data/Enumeration.dart';
-import 'package:lechoix/data/base/BaseResponse.dart';
-import 'package:lechoix/data/model/HTMLModel.dart';
-import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart';
-import 'package:lechoix/features/auth/domain/entities/auth/AuthResponseModel.dart';
+import '../../../../core/base/base_repo.dart';
+import '../../../../core/util/network/endpoints.dart';
+import '../../../../data/Enumeration.dart';
+import '../../../../data/base/BaseResponse.dart';
+import '../../../../data/model/HTMLModel.dart';
+import '../../domain/entities/auth/AuthRequestModel.dart';
+import '../../domain/entities/auth/AuthResponseModel.dart';
 
 class AuthRepo extends BaseRepo {
   Future<BaseResponse<AuthResponseModel>> register(AuthRequestModel model) {

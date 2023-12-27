@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 
+import '../../util/utils/consts/ui_constants.dart';
 import '../space_widget.dart';
 
 class DialogMenuWidget extends StatelessWidget {

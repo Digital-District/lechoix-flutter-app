@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
+
+import '../../util/utils/consts/text_style_constants.dart';
 
 class LabelWithIconWidget extends StatelessWidget {
   final String label;

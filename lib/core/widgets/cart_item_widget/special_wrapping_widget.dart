@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 
+import '../../util/utils/consts/text_style_constants.dart';
+import '../../util/utils/consts/ui_constants.dart';
 import '../space_widget.dart';
 
 class SpecialWrappingWidget extends StatelessWidget {

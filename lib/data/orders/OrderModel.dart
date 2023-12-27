@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:lechoix/data/address/AddressModel.dart';
 
 import '../Enumeration.dart';
+import '../address/AddressModel.dart';
 import '../cart/CartModel.dart';
 import '../cart/CartSummaryModel.dart';
 

@@ -103,7 +103,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<String> logout() async {
     try {
-      final response = await helper.post(url: logoutApi, body: {});
+      await helper.post(url: logoutApi, body: {});
       // if (response["status"] == true) {
       return "logout successfuly";
       // } else {
@@ -187,7 +187,7 @@ class AuthRemoteDataSourceImpl implements AuthRemoteDataSource {
   @override
   Future<String> deleteAccount() async {
     try {
-      final response = await helper.post(url: deleteAccountApi, body: {});
+      await helper.post(url: deleteAccountApi, body: {});
       // if (response["status"] == true) {
       return "Account Deleted successfuly";
       // } else {

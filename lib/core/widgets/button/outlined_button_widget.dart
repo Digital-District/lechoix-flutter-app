@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
+
+import '../../util/utils/consts/ui_constants.dart';
 
 class OutlinedButtonWidget extends StatelessWidget {
   final Widget child;
@@ -15,7 +16,7 @@ class OutlinedButtonWidget extends StatelessWidget {
   final double? width;
 
   const OutlinedButtonWidget({
-    Key? key,
+    super.key,
     required this.child,
     required this.onClick,
     this.padding = const EdgeInsets.all(UIConstants.padding),
@@ -27,7 +28,7 @@ class OutlinedButtonWidget extends StatelessWidget {
     this.borderColor,
     this.backgroundColor,
     this.width,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

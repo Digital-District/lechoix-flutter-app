@@ -5,8 +5,7 @@ class OnBoardingWidget extends StatelessWidget {
   final Widget bottomWidget;
 
   const OnBoardingWidget(
-      {Key? key, required this.topWidget, required this.bottomWidget})
-      : super(key: key);
+      {super.key, required this.topWidget, required this.bottomWidget});
 
   @override
   Widget build(BuildContext context) {

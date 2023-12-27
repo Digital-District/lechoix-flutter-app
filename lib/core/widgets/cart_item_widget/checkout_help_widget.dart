@@ -1,14 +1,14 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/util/utils/navigation_util.dart';
+
+import '../../util/utils/consts/text_style_constants.dart';
+import '../../util/utils/consts/ui_constants.dart';
 import '../need_help_widget.dart';
 import '../space_widget.dart';
 
 class CheckoutHelpWidget extends StatelessWidget {
-  const CheckoutHelpWidget({Key? key}) : super(key: key);
+  const CheckoutHelpWidget({super.key});
 
   @override
   Widget build(BuildContext context) {

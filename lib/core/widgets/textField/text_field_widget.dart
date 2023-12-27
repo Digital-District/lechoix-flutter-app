@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
+
+import '../../util/utils/consts/ui_constants.dart';
 
 class TextFieldWidget extends StatelessWidget {
   final TextEditingController controller;

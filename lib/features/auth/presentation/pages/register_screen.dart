@@ -1,21 +1,22 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:lechoix/base/base_state.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/util/utils/validation_util.dart';
-import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart';
-import 'package:lechoix/features/auth/presentation/cubit/register/register_bloc.dart';
-import 'package:lechoix/features/auth/presentation/pages/login_screen.dart';
-import 'package:lechoix/features/auth/presentation/pages/otp_verify_screen.dart';
-import 'package:lechoix/core/widgets/app_bar_widget.dart';
-import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
-import 'package:lechoix/core/widgets/button/outlined_button_widget.dart';
-import 'package:lechoix/core/widgets/button/text_button_widget.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
-import 'package:lechoix/core/widgets/textField/input_field_widget.dart';
-import 'package:lechoix/core/widgets/textField/phone_text_field_widget.dart';
-import 'package:lechoix/core/widgets/textField/text_field_widget.dart';
+
+import '../../../../core/base/base_state.dart';
+import '../../../../core/util/utils/consts/text_style_constants.dart';
+import '../../../../core/util/utils/consts/ui_constants.dart';
+import '../../../../core/util/utils/validation_util.dart';
+import '../../../../core/widgets/app_bar_widget.dart';
+import '../../../../core/widgets/button/elevated_button_widget.dart';
+import '../../../../core/widgets/button/outlined_button_widget.dart';
+import '../../../../core/widgets/button/text_button_widget.dart';
+import '../../../../core/widgets/space_widget.dart';
+import '../../../../core/widgets/textField/input_field_widget.dart';
+import '../../../../core/widgets/textField/phone_text_field_widget.dart';
+import '../../../../core/widgets/textField/text_field_widget.dart';
+import '../../domain/entities/auth/AuthRequestModel.dart';
+import '../cubit/register/register_bloc.dart';
+import 'login_screen.dart';
+import 'otp_verify_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   final bool allowedToPush;
@@ -98,7 +99,8 @@ class _RegisterScreenState extends BaseState<RegisterScreen, RegisterBloc> {
                     padding: EdgeInsets.zero,
                     child: Text(
                       _obscureTextPass ? localize("Show") : localize("Hide"),
-                      style: const TextStyle(decoration: TextDecoration.underline),
+                      style:
+                          const TextStyle(decoration: TextDecoration.underline),
                     ),
                     onClick: () {
                       setState(() {
@@ -125,7 +127,7 @@ class _RegisterScreenState extends BaseState<RegisterScreen, RegisterBloc> {
                 children: [
                   Checkbox(
                     checkColor: Colors.white,
-                    activeColor: Colors.black,
+                    activeColor: UIConstants.blackColor,
                     value: _receiveAnnouncements,
                     onChanged: (bool? value) {
                       setState(() {
@@ -165,7 +167,8 @@ class _RegisterScreenState extends BaseState<RegisterScreen, RegisterBloc> {
                     ),
                     TextSpan(
                       text: "${localize("Terms & Conditions")},",
-                      style: const TextStyle(decoration: TextDecoration.underline),
+                      style:
+                          const TextStyle(decoration: TextDecoration.underline),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           // navigateTo(
@@ -179,7 +182,8 @@ class _RegisterScreenState extends BaseState<RegisterScreen, RegisterBloc> {
                     TextSpan(text: " ${localize("and")} "),
                     TextSpan(
                       text: localize("Privacy and Cookie Policy."),
-                      style: const TextStyle(decoration: TextDecoration.underline),
+                      style:
+                          const TextStyle(decoration: TextDecoration.underline),
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           // navigateTo(
@@ -204,7 +208,7 @@ class _RegisterScreenState extends BaseState<RegisterScreen, RegisterBloc> {
               ),
               const VerticalSpace(20),
               OutlinedButtonWidget(
-                borderColor: Colors.black,
+                borderColor: UIConstants.blackColor,
                 onClick: () {
                   if (widget.allowedToPush) {
                     navigateTo(const LoginScreen(

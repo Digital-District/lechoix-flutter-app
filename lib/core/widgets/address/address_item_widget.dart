@@ -1,10 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/data/address/AddressModel.dart';
-import 'package:lechoix/core/widgets/button/label_with_icon_widget.dart';
-import 'package:lechoix/core/widgets/button/text_button_widget.dart';
+
+import '../../../data/address/AddressModel.dart';
+import '../../util/utils/consts/text_style_constants.dart';
+import '../../util/utils/consts/ui_constants.dart';
+import '../button/label_with_icon_widget.dart';
+import '../button/text_button_widget.dart';
 import '../space_widget.dart';
 
 class AddressItemWidget extends StatefulWidget {
@@ -108,7 +109,7 @@ class _AddressItemWidgetState extends State<AddressItemWidget> {
                     children: [
                       Checkbox(
                         checkColor: Colors.white,
-                        activeColor: Colors.black,
+                        activeColor: UIConstants.blackColor,
                         value: widget.model.isDefault,
                         onChanged: (bool? value) {
                           onSetDefaultAction();
@@ -154,8 +155,8 @@ class _AddressItemWidgetState extends State<AddressItemWidget> {
                   child: LabelWithIconWidget(
                     label: tr("Edit"),
                     icon: const Icon(Icons.edit),
-                    textPadding:
-                        const EdgeInsets.symmetric(vertical: UIConstants.padding),
+                    textPadding: const EdgeInsets.symmetric(
+                        vertical: UIConstants.padding),
                   ),
                 ),
               ),

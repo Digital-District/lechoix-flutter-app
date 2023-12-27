@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
 
+import '../util/utils/consts/text_style_constants.dart';
+import '../util/utils/consts/ui_constants.dart';
 import 'image/cached_image_widget.dart';
+import 'space_widget.dart';
 
 class FiltrationWidget extends StatelessWidget {
   final String title;

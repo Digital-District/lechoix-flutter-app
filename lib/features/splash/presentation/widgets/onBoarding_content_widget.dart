@@ -1,11 +1,12 @@
 import 'package:flutter/cupertino.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
-import 'package:lechoix/core/widgets/image/cached_image_widget.dart';
-import 'package:lechoix/core/widgets/onBoarding_widget.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
-import '../../../../cache/user_cache.dart';
+
+import '../../../../core/cache/user_cache.dart';
+import '../../../../core/util/utils/consts/text_style_constants.dart';
+import '../../../../core/util/utils/consts/ui_constants.dart';
+import '../../../../core/widgets/button/elevated_button_widget.dart';
+import '../../../../core/widgets/image/cached_image_widget.dart';
+import '../../../../core/widgets/onBoarding_widget.dart';
+import '../../../../core/widgets/space_widget.dart';
 import '../../../../data/response/OnBoardingResponse.dart';
 
 class OnBoardingContentWidget extends StatefulWidget {

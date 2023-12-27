@@ -1,12 +1,12 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/stream/stream_widget.dart';
 
+import '../../util/utils/consts/ui_constants.dart';
 import '../loading_widget.dart';
 import '../no_result_widget.dart';
 import '../retry_widget.dart';
+import 'stream_widget.dart';
 
 class PaginatedListWidget<T> extends StatefulWidget {
   final Stream<PaginationHolder<T>?> stream;

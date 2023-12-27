@@ -7,11 +7,11 @@ import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 import 'package:lechoix/core/util/utils/navigation_util.dart';
 import 'package:lechoix/core/util/utils/route_util.dart';
 import 'package:lechoix/features/auth/presentation/pages/login_screen.dart';
+import 'package:lechoix/features/host/host_screen.dart';
 import 'package:lechoix/features/splash/presentation/pages/onboarding_screen.dart';
 import 'package:lechoix/features/splash/presentation/pages/splash_screen.dart';
-import 'cache/user_cache.dart';
 
-
+import 'core/cache/user_cache.dart';
 
 const isProductionMood = false;
 void main() async {
@@ -33,7 +33,7 @@ void main() async {
           supportedLocales: const [Locale('ar', 'EG'), Locale('en', 'US')],
           path: 'assets/translations',
           fallbackLocale: const Locale('en', 'US'),
-          child: const MyApp()))
+          child: const MyApp()));
   runApp(app);
   // runApp(
   //   EasyLocalization(
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       navigatorKey: NavigationUtil.navigatorKey,
-      title: "lechoix",
+      title: "Le Choix",
       builder: BotToastInit(),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
@@ -66,7 +66,7 @@ class MyApp extends StatelessWidget {
             TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
           },
         ),
-        fontFamily:"Almarai",
+        fontFamily: "Almarai",
         primarySwatch: UIConstants.primaryMaterialColor,
         scaffoldBackgroundColor: UIConstants.backgroundColor,
         colorScheme: const ColorScheme.light(
@@ -76,7 +76,7 @@ class MyApp extends StatelessWidget {
           onSecondary: UIConstants.primaryMaterialColor,
           secondary: UIConstants.secondaryColor,
           // secondaryVariant: UIConstants.secondaryColor,
-          error: Colors.red,
+          error: UIConstants.redColor,
         ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
@@ -113,10 +113,10 @@ class MyApp extends StatelessWidget {
           ),
         ),
         typography: Typography.material2018(),
-        visualDensity: VisualDensity.compact,
+        // visualDensity: VisualDensity.compact,
       ),
       darkTheme: ThemeData(
-        fontFamily:"Almarai",
+        fontFamily: "Almarai",
         brightness: Brightness.dark,
         primarySwatch: UIConstants.primaryMaterialColor,
         primaryColor: UIConstants.primaryMaterialColor,
@@ -182,9 +182,9 @@ class MyApp extends StatelessWidget {
         RouteUtil.splashRoute: (context) => const SplashScreen(),
         RouteUtil.onboardingRoute: (context) => const OnboardingScreen(),
         RouteUtil.login: (context) => const LoginScreen(),
-        // RouteUtil.hostRoute: (context) => HostScreen(
-        //       key: HostScreen.hostPageKey,
-        //     ),
+        RouteUtil.hostRoute: (context) => HostScreen(
+              key: HostScreen.hostPageKey,
+            ),
       },
     );
   }

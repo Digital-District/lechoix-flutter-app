@@ -45,16 +45,4 @@ app.*.map.json
 
 # Not ready yet
 **/lib/repo
-**/lib/ui
-**/lib/features/account
-**/lib/features/address
-**/lib/features/cart
-**/lib/features/categories
-**/lib/features/favourite
-**/lib/features/filter
-**/lib/features/home
-**/lib/features/notifications
-**/lib/features/offers
-**/lib/features/orders
-**/lib/features/product
-**/lib/features/search
+**/lib/data

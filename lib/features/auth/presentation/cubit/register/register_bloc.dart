@@ -1,7 +1,7 @@
-import 'package:lechoix/base/base_bloc.dart';
-import 'package:lechoix/data/base/ErrorModel.dart';
-import 'package:lechoix/features/auth/data/datasources/AuthRepo.dart';
-import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart';
+import '../../../../../core/base/base_bloc.dart';
+import '../../../../../data/base/ErrorModel.dart';
+import '../../../data/datasources/AuthRepo.dart';
+import '../../../domain/entities/auth/AuthRequestModel.dart';
 
 class RegisterBloc extends BaseBloc {
   final AuthRepo _repo = AuthRepo();

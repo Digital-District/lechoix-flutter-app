@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get_it/get_it.dart';
-import 'package:lechoix/features/auth/domain/usecase/delete_account.dart';
-import 'package:lechoix/features/auth/domain/usecase/log_out.dart';
-import 'package:lechoix/features/auth/presentation/cubit/auto_login/auto_login_cubit.dart';
-import 'package:lechoix/features/auth/presentation/cubit/log_out/auth_cubit.dart';
-import 'package:lechoix/features/auth/presentation/cubit/login/login_cubit.dart';
-import 'package:lechoix/features/auth/presentation/cubit/register/register_cubit.dart';
+
 import '../../core/local/auth_local_datasource.dart';
 import '../../injection_container/injection_container.dart';
 import 'data/datasources/auth_remote_data_source.dart';
 import 'data/repositories/auth_repository_impl.dart';
 import 'domain/repositories/auth_repositoriy.dart';
 import 'domain/usecase/auto_login.dart';
+import 'domain/usecase/delete_account.dart';
+import 'domain/usecase/log_out.dart';
 import 'domain/usecase/login_usecase.dart';
 import 'domain/usecase/register_usecase.dart';
+import 'presentation/cubit/auto_login/auto_login_cubit.dart';
 import 'presentation/cubit/delete_account/delete_account_cubit.dart';
+import 'presentation/cubit/log_out/auth_cubit.dart';
+import 'presentation/cubit/login/login_cubit.dart';
+import 'presentation/cubit/register/register_cubit.dart';
 
 Future<void> initAuthInjection(GetIt sl) async {
   //* cubit

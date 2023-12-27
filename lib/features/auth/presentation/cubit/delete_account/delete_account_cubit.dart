@@ -1,11 +1,13 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:lechoix/core/usecases/usecases.dart';
-import 'package:lechoix/core/util/new_navigator/navigator.dart';
-import 'package:lechoix/core/widgets/toast.dart';
-import 'package:lechoix/features/auth/domain/usecase/delete_account.dart';
+
 import '../../../../../core/error/failures.dart';
+import '../../../../../core/usecases/usecases.dart';
+import '../../../../../core/util/new_navigator/navigator.dart';
+import '../../../../../core/widgets/toast.dart';
+import '../../../domain/usecase/delete_account.dart';
 import '../../pages/login_screen.dart';
+
 part 'delete_account_state.dart';
 
 class DeleteAccountCubit extends Cubit<DeleteAccountState> {

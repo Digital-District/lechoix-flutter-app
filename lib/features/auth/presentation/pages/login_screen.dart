@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/base/base_state.dart';
-import 'package:lechoix/cache/user_cache.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/util/utils/navigation_util.dart';
-import 'package:lechoix/core/util/utils/route_util.dart';
-import 'package:lechoix/core/util/utils/validation_util.dart';
-import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart';
-import 'package:lechoix/features/auth/presentation/cubit/login/login_bloc.dart';
-import 'package:lechoix/features/auth/presentation/pages/forgot_password_screen.dart';
-import 'package:lechoix/features/auth/presentation/pages/otp_verify_screen.dart';
-import 'package:lechoix/features/auth/presentation/pages/register_screen.dart';
-import 'package:lechoix/core/widgets/app_bar_widget.dart';
-import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
-import 'package:lechoix/core/widgets/button/outlined_button_widget.dart';
-import 'package:lechoix/core/widgets/button/text_button_widget.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
-import 'package:lechoix/core/widgets/textField/input_field_widget.dart';
-import 'package:lechoix/core/widgets/textField/phone_text_field_widget.dart';
-import 'package:lechoix/core/widgets/textField/text_field_widget.dart';
 
+import '../../../../core/base/base_state.dart';
+import '../../../../core/cache/user_cache.dart';
+import '../../../../core/util/utils/consts/text_style_constants.dart';
+import '../../../../core/util/utils/consts/ui_constants.dart';
+import '../../../../core/util/utils/navigation_util.dart';
+import '../../../../core/util/utils/route_util.dart';
+import '../../../../core/util/utils/validation_util.dart';
+import '../../../../core/widgets/app_bar_widget.dart';
+import '../../../../core/widgets/button/elevated_button_widget.dart';
+import '../../../../core/widgets/button/outlined_button_widget.dart';
+import '../../../../core/widgets/button/text_button_widget.dart';
+import '../../../../core/widgets/space_widget.dart';
+import '../../../../core/widgets/textField/input_field_widget.dart';
+import '../../../../core/widgets/textField/phone_text_field_widget.dart';
+import '../../../../core/widgets/textField/text_field_widget.dart';
+import '../../domain/entities/auth/AuthRequestModel.dart';
+import '../cubit/login/login_bloc.dart';
+import 'forgot_password_screen.dart';
+import 'otp_verify_screen.dart';
+import 'register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   final bool allowedToPush;
@@ -84,7 +84,9 @@ class _LoginScreenState extends BaseState<LoginScreen, LoginBloc> {
                           suffixIcon: TextButtonWidget(
                             padding: EdgeInsets.zero,
                             child: Text(
-                              _obscureTextPass ? localize("Show") : localize("Hide"),
+                              _obscureTextPass
+                                  ? localize("Show")
+                                  : localize("Hide"),
                               style: const TextStyle(
                                   decoration: TextDecoration.underline),
                             ),
@@ -134,7 +136,7 @@ class _LoginScreenState extends BaseState<LoginScreen, LoginBloc> {
                   ),
                   const VerticalSpace(20),
                   OutlinedButtonWidget(
-                    borderColor: Colors.black,
+                    borderColor: UIConstants.blackColor,
                     onClick: () {
                       if (widget.allowedToPush) {
                         navigateTo(const RegisterScreen(

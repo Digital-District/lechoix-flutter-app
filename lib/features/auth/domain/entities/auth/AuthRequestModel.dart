@@ -9,49 +9,27 @@ class AuthRequestModel {
   String? code;
 
   AuthRequestModel.register(
-      String firstName,
-      String lastName,
-      String email,
-      int countryCodeId,
-      String phone,
-      String password,
-      bool receiveAnnouncements) {
-    this.firstName = firstName;
-    this.lastName = lastName;
-    this.email = email;
-    this.countryCodeId = countryCodeId;
-    this.phone = phone;
-    this.password = password;
-    this.receiveAnnouncements = receiveAnnouncements;
-  }
+      String this.firstName,
+      String this.lastName,
+      String this.email,
+      int this.countryCodeId,
+      String this.phone,
+      String this.password,
+      bool this.receiveAnnouncements);
 
-  AuthRequestModel.login(String phone, int countryCodeId, String password) {
-    this.countryCodeId = countryCodeId;
-    this.phone = phone;
-    this.password = password;
-  }
+  AuthRequestModel.login(
+      String this.phone, int this.countryCodeId, String this.password);
 
-  AuthRequestModel.verifyPhone(String phone, int countryCodeId, String code) {
-    this.countryCodeId = countryCodeId;
-    this.phone = phone;
-    this.code = code;
-  }
+  AuthRequestModel.verifyPhone(
+      String this.phone, int this.countryCodeId, String this.code);
 
   AuthRequestModel.forgetPassword(
-    String phone,
-    int countryCodeId,
-  ) {
-    this.countryCodeId = countryCodeId;
-    this.phone = phone;
-  }
+    String this.phone,
+    int this.countryCodeId,
+  );
 
-  AuthRequestModel.resetPassword(
-      int countryCodeId, String phone, String password, String code) {
-    this.countryCodeId = countryCodeId;
-    this.phone = phone;
-    this.password = password;
-    this.code = code;
-  }
+  AuthRequestModel.resetPassword(int this.countryCodeId, String this.phone,
+      String this.password, String this.code);
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};

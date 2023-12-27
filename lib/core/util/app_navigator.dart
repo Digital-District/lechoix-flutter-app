@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../main.dart';
-
 class AppNavigator {
   static Future<void> push(
       {required BuildContext context, required Widget screen}) async {

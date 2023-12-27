@@ -11,7 +11,7 @@ class CachedImageWidget extends StatelessWidget {
   final double? height;
 
   const CachedImageWidget({
-    Key? key,
+    super.key,
     required this.imageUrl,
     this.placeholder = "assets/images/logo_black_icon.png",
     this.fit = BoxFit.cover,
@@ -19,7 +19,7 @@ class CachedImageWidget extends StatelessWidget {
     this.maxWidthDiskCache,
     this.width,
     this.height,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +34,9 @@ class CachedImageWidget extends StatelessWidget {
         aspectRatio: 16 / 9,
         child: Image.asset(placeholder, scale: 2),
       ),
+      // progressIndicatorBuilder: (context, url, progress) {
+      //   return Image.asset("assets/images/loader.gif", scale: 2);
+      // },
       errorWidget: (context, url, error) => AspectRatio(
         aspectRatio: 16 / 9,
         child: Image.asset(placeholder, scale: 2),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
 
 import '../../card_widget.dart';
+import '../../space_widget.dart';
 
 class ProductShimmerWidget extends StatelessWidget {
   final double? width;

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:lechoix/core/widgets/product_widget/shimmer/product_shimmer_widget.dart';
 
 import '../../ShimmerWidget.dart';
+import 'product_shimmer_widget.dart';
 
 class ProductGridShimmerWidget extends StatelessWidget {
   const ProductGridShimmerWidget({super.key});

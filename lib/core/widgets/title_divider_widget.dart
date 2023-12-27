@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
+
+import '../util/utils/consts/ui_constants.dart';
+import 'space_widget.dart';
 
 class TitleDividerWidget extends StatelessWidget {
   final String title;

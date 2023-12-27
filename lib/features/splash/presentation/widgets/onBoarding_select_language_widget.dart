@@ -1,14 +1,15 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lechoix/cache/user_cache.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
-import 'package:lechoix/core/widgets/button/text_button_widget.dart';
-import 'package:lechoix/core/widgets/image/cached_image_widget.dart';
-import 'package:lechoix/core/widgets/onBoarding_widget.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
+
+import '../../../../core/cache/user_cache.dart';
+import '../../../../core/util/utils/consts/text_style_constants.dart';
+import '../../../../core/util/utils/consts/ui_constants.dart';
+import '../../../../core/widgets/button/elevated_button_widget.dart';
+import '../../../../core/widgets/button/text_button_widget.dart';
+import '../../../../core/widgets/image/cached_image_widget.dart';
+import '../../../../core/widgets/onBoarding_widget.dart';
+import '../../../../core/widgets/space_widget.dart';
 import '../../../../data/response/OnBoardingResponse.dart';
 
 class OnBoardingSelectLanguageWidget extends StatefulWidget {

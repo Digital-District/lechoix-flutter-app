@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
+import 'space_widget.dart';
 
 class SubtitleAppBarWidget extends PreferredSize {
   final double height;

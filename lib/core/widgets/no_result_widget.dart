@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/local_helper.dart';
 
+import '../util/utils/local_helper.dart';
 import 'space_widget.dart';
 
 class NoResultWidget extends StatelessWidget {

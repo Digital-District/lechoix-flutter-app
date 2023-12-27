@@ -1,13 +1,14 @@
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
-import 'package:lechoix/cache/country_codes_cache.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/button/text_button_widget.dart';
-import 'package:lechoix/core/widgets/dialog/selection_dialog.dart';
-import 'package:lechoix/core/widgets/image/cached_image_widget.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
-import 'package:lechoix/data/model/CountryCodeModel.dart';
+
+import '../../../data/model/CountryCodeModel.dart';
+import '../../cache/country_codes_cache.dart';
+import '../../util/utils/consts/text_style_constants.dart';
+import '../../util/utils/consts/ui_constants.dart';
+import '../button/text_button_widget.dart';
+import '../dialog/selection_dialog.dart';
+import '../image/cached_image_widget.dart';
+import '../space_widget.dart';
 import 'text_field_widget.dart';
 
 class PhoneTextFieldWidget extends StatefulWidget {

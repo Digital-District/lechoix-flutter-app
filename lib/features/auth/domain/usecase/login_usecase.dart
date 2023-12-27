@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:lechoix/features/auth/domain/usecase/register_usecase.dart';
 
 import '../../../../core/error/failures.dart';
 import '../../../../core/usecases/usecases.dart';
 import '../entities/login.dart';
 import '../repositories/auth_repositoriy.dart';
+import 'register_usecase.dart';
 
 class LoginUseCase extends UseCase<LoginResponse, LoginParams> {
   final AuthRepository repository;

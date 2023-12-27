@@ -1,9 +1,10 @@
 // import 'package:alice/alice.dart';
 import 'package:dio/dio.dart';
-import 'package:lechoix/cache/user_cache.dart';
+import 'package:lechoix/core/cache/user_cache.dart';
 import 'package:lechoix/data/Enumeration.dart';
 import 'package:lechoix/data/base/BaseResponse.dart';
 import 'package:lechoix/main.dart';
+
 import 'endpoints.dart';
 import 'parser.dart';
 
@@ -30,8 +31,8 @@ class NetworkManager {
       headers["Authorization"] =
           "Bearer ${UserCache.instance.getAccessToken()}";
     }
-    var baseURL =  Endpoints.baseUrl;
-    if (isProductionMood == false){
+    var baseURL = Endpoints.baseUrl;
+    if (isProductionMood == false) {
       baseURL = Endpoints.stagingBaseUrl;
     }
     dio.options = BaseOptions(headers: headers, baseUrl: baseURL);

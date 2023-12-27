@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
-import 'package:lechoix/core/widgets/button/outlined_button_widget.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
+import '../button/elevated_button_widget.dart';
+import '../button/outlined_button_widget.dart';
+import '../space_widget.dart';
 import '../card_widget.dart';
 
 class DialogWidget extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 
+import '../../util/utils/consts/ui_constants.dart';
 import 'label_with_icon_widget.dart';
 
 class TextButtonWidget extends StatelessWidget {

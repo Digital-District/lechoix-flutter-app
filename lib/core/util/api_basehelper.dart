@@ -3,10 +3,11 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
-import 'package:lechoix/core/local/auth_local_datasource.dart';
-import 'package:lechoix/core/util/end_points.dart';
-import 'package:lechoix/injection_container/injection_container.dart';
+
+import '../../injection_container/injection_container.dart';
 import '../error/exceptions.dart';
+import '../local/auth_local_datasource.dart';
+import 'end_points.dart';
 
 class ApiBaseHelper {
   final String _baseUrl = baseUrl;

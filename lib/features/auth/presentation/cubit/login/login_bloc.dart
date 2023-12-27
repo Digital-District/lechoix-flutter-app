@@ -1,7 +1,7 @@
-import 'package:lechoix/base/base_bloc.dart';
-import 'package:lechoix/features/auth/data/datasources/AuthRepo.dart';
-import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart';
-import 'package:lechoix/features/auth/domain/entities/auth/AuthResponseModel.dart';
+import '../../../../../core/base/base_bloc.dart';
+import '../../../data/datasources/AuthRepo.dart';
+import '../../../domain/entities/auth/AuthRequestModel.dart';
+import '../../../domain/entities/auth/AuthResponseModel.dart';
 
 class LoginBloc extends BaseBloc {
   final AuthRepo _repo = AuthRepo();

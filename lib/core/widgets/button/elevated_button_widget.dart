@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 
+import '../../util/utils/consts/ui_constants.dart';
 import 'label_with_icon_widget.dart';
 
 class ElevatedButtonWidget extends StatelessWidget {
@@ -16,7 +16,7 @@ class ElevatedButtonWidget extends StatelessWidget {
   final Color? textColor;
 
   const ElevatedButtonWidget({
-    Key? key,
+    super.key,
     required this.child,
     required this.onClick,
     this.margin,
@@ -27,7 +27,7 @@ class ElevatedButtonWidget extends StatelessWidget {
     this.width,
     this.color,
     this.textColor,
-  }) : super(key: key);
+  });
 
   factory ElevatedButtonWidget.icon({
     Key? key,
@@ -75,7 +75,7 @@ class ElevatedButtonWidget extends StatelessWidget {
 
 class _ElevatedButtonWidgetWithIcon extends ElevatedButtonWidget {
   _ElevatedButtonWidgetWithIcon({
-    Key? key,
+    super.key,
     required label,
     required icon,
     required onClick,
@@ -88,7 +88,6 @@ class _ElevatedButtonWidgetWithIcon extends ElevatedButtonWidget {
     primary,
     onPrimary,
   }) : super(
-          key: key,
           child: LabelWithIconWidget(
             label: label,
             icon: icon,

@@ -1,4 +1,4 @@
-import 'package:lechoix/cache/user_cache.dart';
+import '../../core/cache/user_cache.dart';
 
 class OnBoardingResponse {
   List<OnBoardingModel>? onBoarding;
@@ -23,7 +23,6 @@ class OnBoardingResponse {
   }
 }
 
-
 class OnBoardingModel {
   int? index;
   TitleModel? title;
@@ -35,12 +34,12 @@ class OnBoardingModel {
 
   OnBoardingModel(
       {this.index,
-        this.title,
-        this.subTitle,
-        this.content,
-        this.actionContent,
-        this.languageImage,
-        this.image});
+      this.title,
+      this.subTitle,
+      this.content,
+      this.actionContent,
+      this.languageImage,
+      this.image});
 
   OnBoardingModel.fromJson(Map<String, dynamic> json) {
     index = json['index'];
@@ -49,7 +48,7 @@ class OnBoardingModel {
         ? TitleModel.fromJson(json['sub_title'])
         : null;
     content =
-    json['content'] != null ? TitleModel.fromJson(json['content']) : null;
+        json['content'] != null ? TitleModel.fromJson(json['content']) : null;
     actionContent = json['action_content'] != null
         ? TitleModel.fromJson(json['action_content'])
         : null;
@@ -77,15 +76,15 @@ class OnBoardingModel {
     return data;
   }
 
-  String getTitle(){
+  String getTitle() {
     return title?.getValue() ?? "";
   }
 
-  String getSubTitle(){
+  String getSubTitle() {
     return subTitle?.getValue() ?? "";
   }
 
-  String getContent(){
+  String getContent() {
     return content?.getValue() ?? "";
   }
 
@@ -112,10 +111,10 @@ class TitleModel {
     return data;
   }
 
-  String getValue(){
+  String getValue() {
     if (UserCache.instance.isArabic()) {
-      return ar ?? "" ;
+      return ar ?? "";
     }
-    return en ?? "" ;
+    return en ?? "";
   }
 }

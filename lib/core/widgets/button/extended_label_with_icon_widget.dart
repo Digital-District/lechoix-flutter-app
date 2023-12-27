@@ -7,12 +7,12 @@ class ExtendedLabelWithIconWidget extends StatelessWidget {
   final EdgeInsets textPadding;
 
   const ExtendedLabelWithIconWidget({
-    Key? key,
+    super.key,
     required this.label,
     required this.icon,
     this.isLeadingIcon = true,
     this.textPadding = const EdgeInsets.all(0),
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

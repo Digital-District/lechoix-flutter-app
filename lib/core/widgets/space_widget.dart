@@ -5,8 +5,8 @@ class VerticalSpace extends StatelessWidget {
 
   const VerticalSpace(
     this.space, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -19,8 +19,8 @@ class HorizontalSpace extends StatelessWidget {
 
   const HorizontalSpace(
     this.space, {
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

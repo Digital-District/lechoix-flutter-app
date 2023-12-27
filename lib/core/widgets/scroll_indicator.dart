@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 
 // https://pub.dev/packages/scroll_indicator
 
@@ -10,13 +11,15 @@ class ScrollIndicator extends StatefulWidget {
   final Decoration decoration, indicatorDecoration;
   final AlignmentGeometry alignment;
 
-  ScrollIndicator(
-      {required this.scrollController,
+  const ScrollIndicator(
+      {super.key,
+      required this.scrollController,
       this.width = 100,
       this.height = 10,
       this.indicatorWidth = 20,
-      this.decoration = const BoxDecoration(color: Colors.black26),
-      this.indicatorDecoration = const BoxDecoration(color: Colors.black),
+      this.decoration = const BoxDecoration(color: UIConstants.blackColor),
+      this.indicatorDecoration =
+          const BoxDecoration(color: UIConstants.blackColor),
       this.alignment = Alignment.center});
 
   @override

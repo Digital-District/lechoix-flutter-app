@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/base/base_state.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/widgets/image/cached_image_widget.dart';
-import 'package:lechoix/core/widgets/product_widget/product_bloc.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
-import 'package:lechoix/data/model/ProductModel.dart';
+import '../../base/base_state.dart';
+import '../../util/utils/consts/text_style_constants.dart';
+import '../../util/utils/consts/ui_constants.dart';
+import '../image/cached_image_widget.dart';
+import 'product_bloc.dart';
+import '../space_widget.dart';
+import '../../../data/model/ProductModel.dart';
 
 class ProductWidget extends StatefulWidget {
   final ProductModel product;
@@ -84,8 +84,8 @@ class _ProductWidgetState extends BaseState<ProductWidget, ProductBloc> {
                               ? const SizedBox(
                                   width: 18,
                                   height: 18,
-                                  child: CircularProgressIndicator(
-                                      strokeWidth: 2),
+                                  child:
+                                      CircularProgressIndicator(strokeWidth: 2),
                                 )
                               : GestureDetector(
                                   onTap: onFavouriteClick,

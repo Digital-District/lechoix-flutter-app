@@ -6,13 +6,13 @@ import 'cached_image_widget.dart';
 class ImageViewWidget extends StatelessWidget {
   final String imageUrl;
 
-  const ImageViewWidget({Key? key, required this.imageUrl}) : super(key: key);
+  const ImageViewWidget({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget(
-        centerWidget: Text(""),
+        centerWidget: const Text(""),
       ),
       body: SizedBox(
         width: double.infinity,

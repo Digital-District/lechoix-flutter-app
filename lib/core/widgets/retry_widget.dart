@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/local_helper.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
 
+import '../util/utils/local_helper.dart';
 import 'button/elevated_button_widget.dart';
+import 'space_widget.dart';
 
 class RetryWidget extends StatelessWidget {
   final String? msg;
   final Function() onRetry;
 
   const RetryWidget({
-    Key? key,
+    super.key,
     this.msg,
     required this.onRetry,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

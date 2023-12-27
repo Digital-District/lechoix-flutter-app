@@ -11,13 +11,13 @@ class StreamWidget<T> extends StatelessWidget {
   final T? initial;
 
   const StreamWidget({
-    Key? key,
+    super.key,
     required this.stream,
     required this.onRetry,
     this.loadingWidget = const LoadingWidget(),
     required this.child,
     this.initial,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

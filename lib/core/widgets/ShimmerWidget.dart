@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../util/utils/consts/ui_constants.dart';
 
 class ShimmerWidget extends StatelessWidget {
   final Widget child;

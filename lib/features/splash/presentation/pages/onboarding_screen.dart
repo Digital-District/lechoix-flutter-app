@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/base/base_state.dart';
-import 'package:lechoix/base/dummy_bloc.dart';
-import 'package:lechoix/cache/user_cache.dart';
-import 'package:lechoix/core/util/utils/navigation_util.dart';
-import 'package:lechoix/core/util/utils/route_util.dart';
-import 'package:lechoix/features/splash/presentation/widgets/onBoarding_content_widget.dart';
-import 'package:lechoix/features/splash/presentation/widgets/onBoarding_notifications_widget.dart';
-import 'package:lechoix/features/splash/presentation/widgets/onBoarding_select_language_widget.dart';
 
+import '../../../../core/base/base_state.dart';
+import '../../../../core/base/dummy_bloc.dart';
+import '../../../../core/cache/user_cache.dart';
+import '../../../../core/util/utils/navigation_util.dart';
+import '../../../../core/util/utils/route_util.dart';
+import '../widgets/onBoarding_content_widget.dart';
+import '../widgets/onBoarding_notifications_widget.dart';
+import '../widgets/onBoarding_select_language_widget.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});
@@ -32,16 +32,15 @@ class _OnboardingScreenState extends BaseState<OnboardingScreen, DummyBloc> {
         controller: controller,
         physics: const NeverScrollableScrollPhysics(),
         children: <Widget>[
-      OnBoardingSelectLanguageWidget(
-        callBack: navigateToTheNext,
-      ),
-      OnBoardingContentWidget(
-        callBack: navigateToTheNext,
-      ),
-      OnBoardingNotificationsWidget(
-        callBack: navigateToTheNext,
-      ),
-
+          OnBoardingSelectLanguageWidget(
+            callBack: navigateToTheNext,
+          ),
+          OnBoardingContentWidget(
+            callBack: navigateToTheNext,
+          ),
+          OnBoardingNotificationsWidget(
+            callBack: navigateToTheNext,
+          ),
         ],
       ),
     );
@@ -50,7 +49,7 @@ class _OnboardingScreenState extends BaseState<OnboardingScreen, DummyBloc> {
   void navigateToTheNext() {
     print(controller.page);
     if (controller.page == 2) {
-      pushReplacementNamed(RouteUtil.login);
+      pushReplacementNamed(RouteUtil.hostRoute);
       UserCache.instance.setOnboardingStatus(true);
     } else {
       controller.nextPage(

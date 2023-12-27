@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/base/base_state.dart';
-import 'package:lechoix/core/util/utils/navigation_util.dart';
-import 'package:lechoix/core/util/utils/route_util.dart';
-import 'package:lechoix/features/auth/domain/entities/auth/AuthRequestModel.dart';
-import 'package:lechoix/features/auth/presentation/cubit/check_otp/otp_verify_bloc.dart';
-import 'package:lechoix/features/auth/presentation/pages/reset_password_screen.dart';
-import 'package:lechoix/core/widgets/app_bar_widget.dart';
-import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
-import 'package:lechoix/core/widgets/stream/stream_widget.dart';
+import 'package:lechoix/core/constant/colors/colors.dart';
+import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
 import 'package:sms_autofill/sms_autofill.dart';
 
+import '../../../../core/base/base_state.dart';
+import '../../../../core/util/utils/navigation_util.dart';
+import '../../../../core/util/utils/route_util.dart';
+import '../../../../core/widgets/app_bar_widget.dart';
+import '../../../../core/widgets/button/elevated_button_widget.dart';
+import '../../../../core/widgets/space_widget.dart';
+import '../../../../core/widgets/stream/stream_widget.dart';
 import '../../../../data/Enumeration.dart';
+import '../../domain/entities/auth/AuthRequestModel.dart';
+import '../cubit/check_otp/otp_verify_bloc.dart';
+import 'reset_password_screen.dart';
 
 class OTPVerifyScreen extends StatefulWidget {
   final OTPMood mood;
@@ -68,7 +70,7 @@ class _OTPVerifyScreenState extends BaseState<OTPVerifyScreen, OTPVerifyBloc> {
                             bgColorBuilder: FixedColorBuilder(
                                 Theme.of(context).colorScheme.primary),
                             strokeColorBuilder: FixedColorBuilder(
-                                Colors.black.withOpacity(0.3))),
+                                UIConstants.blackColor.withOpacity(0.3))),
                         onCodeSubmitted: (code) {},
                         onCodeChanged: (code) {
                           if (code!.length == 5) {

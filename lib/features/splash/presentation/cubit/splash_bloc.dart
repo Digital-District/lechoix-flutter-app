@@ -1,10 +1,9 @@
-import 'package:lechoix/base/base_bloc.dart';
-import 'package:lechoix/base/base_view.dart';
-import 'package:lechoix/cache/configuration_cache.dart';
-import 'package:lechoix/cache/country_codes_cache.dart';
-import 'package:lechoix/data/response/OnBoardingResponse.dart';
-import 'package:lechoix/features/splash/presentation/cubit/ConfigRepo.dart';
-import 'package:lechoix/features/splash/presentation/cubit/config_repo_graphql.dart';
+import '../../../../core/base/base_bloc.dart';
+import '../../../../core/cache/configuration_cache.dart';
+import '../../../../core/cache/country_codes_cache.dart';
+import '../../../../data/response/OnBoardingResponse.dart';
+import 'ConfigRepo.dart';
+import 'config_repo_graphql.dart';
 
 class SplashBloc extends BaseBloc {
   final ConfigRepo _repo = ConfigRepo();
@@ -14,8 +13,8 @@ class SplashBloc extends BaseBloc {
 
   Future<void> getCountryCodes() async {
     try {
-      // var baseResponse = await _repo.getCountryCodes();
-      var baseResponse = await _repoGql.getCountryCodes();
+      var baseResponse = await _repo.getCountryCodes();
+      // var baseResponse = await _repoGql.getCountryCodes();
       CountryCodesCache.instance.countryCodes =
           baseResponse.data?.countryCodes ?? [];
     } catch (e) {
@@ -32,7 +31,6 @@ class SplashBloc extends BaseBloc {
     }
   }
 
-
   Future<OnBoardingResponse?> getOnBoardingScreens() async {
     view.showProgress();
     try {
@@ -44,7 +42,6 @@ class SplashBloc extends BaseBloc {
     }
     return null;
   }
-
 
   @override
   void onDispose() {

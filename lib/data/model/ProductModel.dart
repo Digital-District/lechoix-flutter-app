@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/data/model/BrandModel.dart';
-import 'package:lechoix/data/model/ColorModel.dart';
-import 'package:lechoix/data/model/SizeModel.dart';
-import 'package:lechoix/data/model/VariationModel.dart';
+import 'BrandModel.dart';
+import 'ColorModel.dart';
+import 'SizeModel.dart';
+import 'VariationModel.dart';
 
 class ProductModel {
   int? id;

@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:lechoix/data/cart/TaxModel.dart';
 
 import 'CouponModel.dart';
+import 'TaxModel.dart';
 
 class CartSummaryModel {
   String? subTotal;

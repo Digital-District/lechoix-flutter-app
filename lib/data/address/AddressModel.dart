@@ -1,4 +1,4 @@
-import 'package:lechoix/data/address/locations/LocationModel.dart';
+import 'locations/LocationModel.dart';
 
 class AddressModel {
   int? id;

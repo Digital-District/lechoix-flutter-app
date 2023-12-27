@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lechoix/base/base_state.dart';
+
+import '../../base/base_state.dart';
 
 class NavigationUtil {
   static GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -38,8 +39,8 @@ class NavigationUtil {
         context: context,
         pageBuilder: (context, anim1, anim2) => screen,
         transitionBuilder: (context, anim1, anim2, child) => SlideTransition(
-          position:
-              Tween(begin: Offset(0, 1), end: Offset(0, 0)).animate(anim1),
+          position: Tween(begin: const Offset(0, 1), end: const Offset(0, 0))
+              .animate(anim1),
           child: child,
         ),
       );

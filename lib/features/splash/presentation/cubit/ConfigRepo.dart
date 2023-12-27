@@ -1,11 +1,12 @@
-import 'package:lechoix/base/base_repo.dart';
-import 'package:lechoix/core/util/network/endpoints.dart';
-import 'package:lechoix/data/ConfigurationModel.dart';
-import 'package:lechoix/data/Enumeration.dart';
-import 'package:lechoix/data/address/locations/LocationsResponse.dart';
-import 'package:lechoix/data/base/BaseResponse.dart';
-import 'package:lechoix/data/response/CountryCodeResponse.dart';
-import 'package:lechoix/data/response/OnBoardingResponse.dart';
+import '../../../../core/base/base_repo.dart';
+import '../../../../core/util/network/endpoints.dart';
+import '../../../../data/ConfigurationModel.dart';
+import '../../../../data/Enumeration.dart';
+import '../../../../data/address/locations/LocationsResponse.dart';
+import '../../../../data/base/BaseResponse.dart';
+import '../../../../data/response/CountryCodeResponse.dart';
+import '../../../../data/response/OnBoardingResponse.dart';
+
 class ConfigRepo extends BaseRepo {
   Future<BaseResponse<CountryCodeResponse>> getCountryCodes() {
     return networkManager.request<CountryCodeResponse>(

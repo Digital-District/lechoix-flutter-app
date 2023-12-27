@@ -1,18 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lechoix/base/base_state.dart';
-import 'package:lechoix/cache/user_cache.dart';
-import 'package:lechoix/core/util/utils/consts/text_style_constants.dart';
-import 'package:lechoix/core/util/utils/consts/ui_constants.dart';
-import 'package:lechoix/core/util/utils/notification_handler.dart';
-import 'package:lechoix/core/widgets/button/elevated_button_widget.dart';
-import 'package:lechoix/core/widgets/button/text_button_widget.dart';
-import 'package:lechoix/core/widgets/image/cached_image_widget.dart';
-import 'package:lechoix/core/widgets/onBoarding_widget.dart';
-import 'package:lechoix/core/widgets/space_widget.dart';
-import 'package:lechoix/features/splash/presentation/cubit/notification_bloc.dart';
 
+import '../../../../core/base/base_state.dart';
+import '../../../../core/cache/user_cache.dart';
+import '../../../../core/util/utils/consts/text_style_constants.dart';
+import '../../../../core/util/utils/consts/ui_constants.dart';
+import '../../../../core/widgets/button/elevated_button_widget.dart';
+import '../../../../core/widgets/button/text_button_widget.dart';
+import '../../../../core/widgets/image/cached_image_widget.dart';
+import '../../../../core/widgets/onBoarding_widget.dart';
+import '../../../../core/widgets/space_widget.dart';
 import '../../../../data/response/OnBoardingResponse.dart';
+import '../cubit/notification_bloc.dart';
+
 class OnBoardingNotificationsWidget extends StatefulWidget {
   final Function() callBack;
 
@@ -81,7 +81,7 @@ class _OnBoardingNotificationsWidgetState
   }
 
   Future<void> requestNotificationPermission() async {
-    await NotificationHandler.instance.init();
+    // await NotificationHandler.instance.init();
     // await bloc.updateNotificationToken();
 
     widget.callBack();
